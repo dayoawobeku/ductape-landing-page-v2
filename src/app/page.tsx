@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 const navItems = [
   {
@@ -17,7 +16,7 @@ const navItems = [
   },
   {
     name: "Pricing",
-    path: "",
+    path: "https://docs.ductape.app/pricing",
   },
   {
     name: "FAQS",
@@ -161,14 +160,13 @@ const featuresCards = [
 ];
 
 export default function Homepage() {
-  const router = useRouter();
   const [isFading, setIsFading] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleClick = (path: string) => {
+  const handleClick = () => {
     setIsFading(true);
     setTimeout(() => {
-      router.push(path);
+      setIsFading(false);
     }, 300);
   };
 
@@ -190,7 +188,7 @@ export default function Homepage() {
             {navItems.map((item) => (
               <Link href={item.path} key={item.path} target="_blank">
                 <Button
-                  onClick={() => handleClick(item.path)}
+                  onClick={() => handleClick()}
                   className="font-medium text-base text-white hover:no-underline"
                   variant="link"
                 >
@@ -239,7 +237,7 @@ export default function Homepage() {
               <Link href={item.path} key={item.path} target="_blank">
                 <Button
                   onClick={() => {
-                    handleClick(item.path);
+                    handleClick();
                     setMenuOpen(false);
                   }}
                   className="text-white hover:no-underline"
