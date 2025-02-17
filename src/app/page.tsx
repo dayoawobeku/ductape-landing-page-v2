@@ -16,7 +16,7 @@ const navItems = [
   },
   {
     name: "Pricing",
-    path: "",
+    path: "https://docs.ductape.app/pricing",
   },
   {
     name: "FAQS",
