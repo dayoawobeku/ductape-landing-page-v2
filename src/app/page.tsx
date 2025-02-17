@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 const navItems = [
   {
@@ -77,7 +76,8 @@ function QuickLinks() {
                   <Link
                     href={link.path}
                     className="text-base text-white font-medium hover:text-grey-400"
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {link.name}
                   </Link>
@@ -99,7 +99,11 @@ function DownloadButton({ className = "" }: DownloadButtonProps) {
   const isPrimary = className.includes("bg-primary");
 
   return (
-    <Link href="https://www.npmjs.com/package/ductape-sdk" target="_blank" rel="noopener noreferrer">
+    <Link
+      href="https://www.npmjs.com/package/ductape-sdk"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Button
         className={`w-full max-w-[235px] h-[56px] rounded-[100px] px-[25px] py-[14px] flex items-center gap-[15px] bg-white text-primary hover:text-primary hover:shadow-lg ${className}`}
         variant="ghost"
@@ -161,21 +165,20 @@ const featuresCards = [
 ];
 
 export default function Homepage() {
-  const router = useRouter();
   const [isFading, setIsFading] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleClick = (path: string) => {
+  const handleClick = () => {
     setIsFading(true);
     setTimeout(() => {
-      router.push(path);
+      setIsFading(false);
     }, 300);
   };
 
   return (
     <main>
-      <header className="relative text-center bg-[url('/images/auth-bg.png')] bg-cover bg-center bg-no-repeat text-white pb-20 lg:pb-48 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url('/images/overlay.png')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-20 before:mix-blend-overlay before:z-[-1]">
-        <div className="max-w-full w-full mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 py-4 md:py-6">
+      <header className="max-w-[1440px] w-full mx-auto relative text-center bg-[url('/images/auth-bg.png')] bg-cover bg-center bg-no-repeat text-white pb-20 lg:pb-48 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url('/images/overlay.png')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-20 before:mix-blend-overlay before:z-[-1]">
+        <div className="max-w-[1440px] w-full mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 py-4 md:py-6">
           <div role="img" aria-label="Ductape Logo">
             <p className="text-white text-2xl md:text-3xl font-black uppercase leading-9">
               ductape
@@ -188,14 +191,15 @@ export default function Homepage() {
             }`}
           >
             {navItems.map((item) => (
-              <Link href={item.path} key={item.path} target="_blank" rel="noopener noreferrer">
-                <Button
-                  onClick={() => handleClick(item.path)}
-                  className="font-medium text-base text-white hover:no-underline"
-                  variant="link"
-                >
-                  {item.name}
-                </Button>
+              <Link
+                href={item.path}
+                key={item.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-base text-white hover:no-underline"
+                onClick={() => handleClick()}
+              >
+                {item.name}
               </Link>
             ))}
           </nav>
@@ -215,13 +219,13 @@ export default function Homepage() {
             >
               ☰
             </button>
-            <Link href="https://cloud.ductape.app" target="_blank" rel="noopener noreferrer">
-              <Button
-                className="md:hidden lg:inline-block font-medium text-base bg-transparent border-0 text-white hover:no-underline"
-                variant="link"
-              >
-                Login
-              </Button>
+            <Link
+              href="https://cloud.ductape.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:hidden lg:inline-block font-medium text-base bg-transparent border-0 text-white hover:no-underline"
+            >
+              Login
             </Link>
             <DownloadButton />
           </div>
@@ -237,26 +241,27 @@ export default function Homepage() {
             </button>
 
             {navItems.map((item) => (
-              <Link href={item.path} key={item.path} target="_blank" rel="noopener noreferrer">
-                <Button
-                  onClick={() => {
-                    handleClick(item.path);
-                    setMenuOpen(false);
-                  }}
-                  className="text-white hover:no-underline"
-                  variant="link"
-                >
-                  {item.name}
-                </Button>
+              <Link
+                href={item.path}
+                key={item.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  handleClick();
+                  setMenuOpen(false);
+                }}
+                className="text-white hover:no-underline"
+              >
+                {item.name}
               </Link>
             ))}
-            <Link href="https://cloud.ductape.app" target="_blank" rel="noopener noreferrer">
-              <Button
-                className="font-medium text-base bg-transparent border-0 text-white hover:no-underline"
-                variant="link"
-              >
-                Login
-              </Button>
+            <Link
+              href="https://cloud.ductape.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-base bg-transparent border-0 text-white hover:no-underline"
+            >
+              Login
             </Link>
           </div>
         )}
@@ -283,7 +288,11 @@ export default function Homepage() {
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 py-8">
             <DownloadButton />
-            <Link href="https://docs.ductape.app/" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://docs.ductape.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="w-full md:w-[211px] h-[56px] rounded-full border border-gray-300 flex items-center justify-center gap-3 hover:shadow-lg">
                 Read Documentation
               </Button>
@@ -312,7 +321,7 @@ export default function Homepage() {
         </div>
       </header>
 
-      <section className="max-w-[1506px] mx-auto flex flex-col lg:flex-row items-center justify-between mt-36 md:mt-96 px-6 md:px-12 lg:px-16 bg-[#FFFDF9]">
+      <section className="max-w-[1312px] mx-auto flex flex-col lg:flex-row items-center justify-between mt-36 md:mt-96 px-6 md:px-12 lg:px-16 bg-[#FFFDF9]">
         <div className="max-w-[542px] text-center md:text-center lg:text-left">
           <p className="text-lg md:text-xl leading-6 md:leading-8 font-semibold text-[#5F5F5F] py-2 md:py-3">
             A FULL SERVICE API MARKETPLACE
@@ -326,7 +335,11 @@ export default function Homepage() {
             every environment.
           </p>
           <div className="md:flex md:justify-center lg:justify-start">
-            <Link href="https://docs.ductape.app/" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://docs.ductape.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="w-full sm:w-[211px] h-[56px] rounded-full px-6 py-3 border flex items-center justify-center gap-3 bg-white border-[#5F5F5F] text-grey hover:shadow-lg hover:bg-white hover:text-grey mx-auto md:mx-0">
                 Read Documentation
               </Button>
@@ -374,7 +387,7 @@ export default function Homepage() {
         </div>
       </section>
 
-      <section className="max-w-[1506px] mx-auto px-6 md:px-12 lg:px-16 py-12 bg-[#FFFDF9]">
+      <section className="max-w-[1312px] mx-auto px-6 md:px-12 lg:px-16 py-12 bg-[#FFFDF9]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           <div className="md:col-span-2 lg:col-span-3 bg-[#A3C6FB] p-6 md:p-10 rounded-lg shadow-md text-center md:text-left">
             <p className="text-2xl md:text-4xl font-bold text-grey">
@@ -446,7 +459,7 @@ export default function Homepage() {
         </div>
       </section>
 
-      <section className="px-6 md:px-12 lg:px-16 text-center mt-20 bg-[#1B1B1B] text-white py-16">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 text-center mt-20 bg-[#1B1B1B] text-white py-16">
         <div className="max-w-[833px] mx-auto">
           <p className="text-lg md:text-xl leading-6 md:leading-7 font-semibold py-3">
             THE DUCTAPE ADVANTAGE
@@ -455,7 +468,11 @@ export default function Homepage() {
             Reduce development time and accelerate time-to-market
           </p>
           <div className="flex items-center justify-center py-4">
-            <Link href="https://docs.ductape.app/" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://docs.ductape.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="w-full md:w-[211px] h-[56px] rounded-full px-6 py-3 border flex items-center justify-center gap-3 hover:shadow-lg border-primary">
                 Read Documentation
               </Button>
@@ -487,9 +504,9 @@ export default function Homepage() {
 
       <section
         aria-labelledby="testimonials"
-        className="bg-[#FDF3E3] px-6 md:px-12 lg:px-16 py-16"
+        className="bg-[#FDF3E3] px-6 md:px-12 lg:px-16 py-16 max-w-[1440px] mx-auto "
       >
-        <div className="max-w-[1506px] mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <h2
             id="testimonials"
             className="text-3xl md:text-5xl leading-[40px] md:leading-[60px] font-bold text-grey w-full md:w-[50%] pr-0 md:pr-2"
@@ -531,7 +548,7 @@ export default function Homepage() {
         </div>
       </section>
 
-      <footer className="bg-[#1B1B1B] text-white px-6 md:px-12 lg:px-16">
+      <footer className="bg-[#1B1B1B] text-white px-6 md:px-12 lg:px-16 max-w-[1440px] mx-auto ">
         <section className="text-center py-16 md:py-24 flex flex-col items-center max-w-[718px] mx-auto">
           <p className="text-2xl md:text-4xl font-semibold leading-[3rem] md:leading-[4rem] w-full px-4 md:px-0">
             Get started today and transform the way you build
@@ -543,7 +560,11 @@ export default function Homepage() {
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 py-8 md:py-10">
             <DownloadButton className="bg-primary text-white hover:bg-primary hover:text-white hover:shadow-lg" />
-            <Link href="https://discord.gg/kAvdDney" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://discord.gg/kAvdDney"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="ghost"
                 className="w-full md:w-[235px] h-[56px] rounded-[100px] px-6 py-4 border border-gray-300 flex items-center justify-center gap-4 hover:bg-opacity-10 hover:text-white"
