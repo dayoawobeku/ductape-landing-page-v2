@@ -177,7 +177,7 @@ export default function Homepage() {
 
   return (
     <main>
-      <header className="max-w-[1440px] w-full mx-auto relative text-center bg-[url('/images/auth-bg.png')] bg-cover bg-center bg-no-repeat text-white pb-20 lg:pb-48 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url('/images/overlay.png')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-20 before:mix-blend-overlay before:z-[-1]">
+      <header className="relative text-center bg-[url('/images/auth-bg.png')] bg-cover bg-center bg-no-repeat text-white pb-20 lg:pb-48 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url('/images/overlay.png')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-20 before:mix-blend-overlay before:z-[-1]">
         <div className="max-w-[1440px] w-full mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 py-4 md:py-6">
           <div role="img" aria-label="Ductape Logo">
             <p className="text-white text-2xl md:text-3xl font-black uppercase leading-9">
@@ -459,52 +459,56 @@ export default function Homepage() {
         </div>
       </section>
 
-      <section className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 text-center mt-20 bg-[#1B1B1B] text-white py-16">
-        <div className="max-w-[833px] mx-auto">
-          <p className="text-lg md:text-xl leading-6 md:leading-7 font-semibold py-3">
-            THE DUCTAPE ADVANTAGE
-          </p>
-          <p className="text-3xl md:text-5xl leading-8 md:leading-[60px] font-bold">
-            Reduce development time and accelerate time-to-market
-          </p>
-          <div className="flex items-center justify-center py-4">
-            <Link
-              href="https://docs.ductape.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="w-full md:w-[211px] h-[56px] rounded-full px-6 py-3 border flex items-center justify-center gap-3 hover:shadow-lg border-primary">
-                Read Documentation
-              </Button>
-            </Link>
-          </div>
-        </div>
-
-        <div className=" max-w-[1506px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-10 px-4 md:px-0">
-          {featuresCards.map((card, index) => (
-            <div
-              key={index}
-              className="bg-transparent text-white p-6 rounded-lg shadow-sm text-start"
-            >
-              <Image
-                src={card.icon}
-                alt={card.title}
-                className="w-10 h-10 mb-4"
-                width={40}
-                height={40}
-              />
-              <p className="text-xl md:text-2xl font-semibold">{card.title}</p>
-              <p className="text-base md:text-lg font-medium my-2">
-                {card.description}
-              </p>
+      <section className="px-6 md:px-12 lg:px-16 text-center mt-20 bg-[#1B1B1B] text-white py-16">
+        <div className="max-w-[1440px] mx-auto">
+          <div className="max-w-[833px] mx-auto">
+            <p className="text-lg md:text-xl leading-6 md:leading-7 font-semibold py-3">
+              THE DUCTAPE ADVANTAGE
+            </p>
+            <p className="text-3xl md:text-5xl leading-8 md:leading-[60px] font-bold">
+              Reduce development time and accelerate time-to-market
+            </p>
+            <div className="flex items-center justify-center py-4">
+              <Link
+                href="https://docs.ductape.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full md:w-[211px] h-[56px] rounded-full px-6 py-3 border flex items-center justify-center gap-3 hover:shadow-lg border-primary">
+                  Read Documentation
+                </Button>
+              </Link>
             </div>
-          ))}
+          </div>
+
+          <div className=" max-w-[1506px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-10 px-4 md:px-0">
+            {featuresCards.map((card, index) => (
+              <div
+                key={index}
+                className="bg-transparent text-white p-6 rounded-lg shadow-sm text-start"
+              >
+                <Image
+                  src={card.icon}
+                  alt={card.title}
+                  className="w-10 h-10 mb-4"
+                  width={40}
+                  height={40}
+                />
+                <p className="text-xl md:text-2xl font-semibold">
+                  {card.title}
+                </p>
+                <p className="text-base md:text-lg font-medium my-2">
+                  {card.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section
         aria-labelledby="testimonials"
-        className="bg-[#FDF3E3] px-6 md:px-12 lg:px-16 py-16 max-w-[1440px] mx-auto "
+        className="bg-[#FDF3E3] px-6 md:px-12 lg:px-16 py-16"
       >
         <div className="max-w-[1440px] mx-auto">
           <h2
@@ -548,67 +552,69 @@ export default function Homepage() {
         </div>
       </section>
 
-      <footer className="bg-[#1B1B1B] text-white px-6 md:px-12 lg:px-16 max-w-[1440px] mx-auto ">
-        <section className="text-center py-16 md:py-24 flex flex-col items-center max-w-[718px] mx-auto">
-          <p className="text-2xl md:text-4xl font-semibold leading-[3rem] md:leading-[4rem] w-full px-4 md:px-0">
-            Get started today and transform the way you build
-          </p>
-          <p className="text-lg md:text-xl font-medium w-full max-w-[780px] px-4 md:px-10 py-5">
-            Ductape gives you the tools to create, integrate, and manage
-            components and services at breakneck speed—without sacrificing
-            reliability or control.
-          </p>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 py-8 md:py-10">
-            <DownloadButton className="bg-primary text-white hover:bg-primary hover:text-white hover:shadow-lg" />
-            <Link
-              href="https://discord.gg/kAvdDney"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="ghost"
-                className="w-full md:w-[235px] h-[56px] rounded-[100px] px-6 py-4 border border-gray-300 flex items-center justify-center gap-4 hover:bg-opacity-10 hover:text-white"
+      <footer className="bg-[#1B1B1B] text-white px-6 md:px-12 lg:px-16">
+        <div className="max-w-[1440px] mx-auto">
+          <section className="text-center py-16 md:py-24 flex flex-col items-center max-w-[718px] mx-auto">
+            <p className="text-2xl md:text-4xl font-semibold leading-[3rem] md:leading-[4rem] w-full px-4 md:px-0">
+              Get started today and transform the way you build
+            </p>
+            <p className="text-lg md:text-xl font-medium w-full max-w-[780px] px-4 md:px-10 py-5">
+              Ductape gives you the tools to create, integrate, and manage
+              components and services at breakneck speed—without sacrificing
+              reliability or control.
+            </p>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 py-8 md:py-10">
+              <DownloadButton className="bg-primary text-white hover:bg-primary hover:text-white hover:shadow-lg" />
+              <Link
+                href="https://discord.gg/kAvdDney"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Image
-                  src="/images/discord.svg"
-                  alt="Join Discord"
-                  width={24}
-                  height={18}
-                />
-                <span>Join our Discord Channel</span>
-              </Button>
-            </Link>
-          </div>
-        </section>
+                <Button
+                  variant="ghost"
+                  className="w-full md:w-[235px] h-[56px] rounded-[100px] px-6 py-4 border border-gray-300 flex items-center justify-center gap-4 hover:bg-opacity-10 hover:text-white"
+                >
+                  <Image
+                    src="/images/discord.svg"
+                    alt="Join Discord"
+                    width={24}
+                    height={18}
+                  />
+                  <span>Join our Discord Channel</span>
+                </Button>
+              </Link>
+            </div>
+          </section>
 
-        <section className="max-w-[1506px] mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left border-y border-[#444444] py-16">
-          <QuickLinks />
-        </section>
-        <div className="flex flex-col md:flex-row items-center justify-between pt-16 pb-8 px-6 md:px-16 gap-6 md:gap-0">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
-            <div role="img" aria-label="Ductape Logo">
-              <p className="text-white text-2xl md:text-[2rem] font-black uppercase leading-9">
-                ductape
+          <section className="max-w-[1506px] mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left border-y border-[#444444] py-16">
+            <QuickLinks />
+          </section>
+          <div className="flex flex-col md:flex-row items-center justify-between pt-16 pb-8 px-6 md:px-16 gap-6 md:gap-0">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
+              <div role="img" aria-label="Ductape Logo">
+                <p className="text-white text-2xl md:text-[2rem] font-black uppercase leading-9">
+                  ductape
+                </p>
+              </div>
+              <p className="text-sm md:text-base font-medium text-center md:text-left">
+                © Ductape Technologies 2025
               </p>
             </div>
-            <p className="text-sm md:text-base font-medium text-center md:text-left">
-              © Ductape Technologies 2025
-            </p>
-          </div>
 
-          <div className="flex items-center gap-5 justify-center">
-            <Link
-              href="https://www.linkedin.com/company/ductape-technologies"
-              className="text-sm md:text-base font-semibold underline text-white"
-            >
-              LINKEDIN
-            </Link>
-            <Link
-              href=""
-              className="text-sm md:text-base font-semibold underline text-white"
-            >
-              GITHUB
-            </Link>
+            <div className="flex items-center gap-5 justify-center">
+              <Link
+                href="https://www.linkedin.com/company/ductape-technologies"
+                className="text-sm md:text-base font-semibold underline text-white"
+              >
+                LINKEDIN
+              </Link>
+              <Link
+                href=""
+                className="text-sm md:text-base font-semibold underline text-white"
+              >
+                GITHUB
+              </Link>
+            </div>
           </div>
         </div>
       </footer>
