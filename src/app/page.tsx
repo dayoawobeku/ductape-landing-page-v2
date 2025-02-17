@@ -176,7 +176,7 @@ export default function Homepage() {
   };
 
   return (
-    <main>
+    <main className="bg-[#FFFDF9]">
       <header className="relative text-center bg-[url('/images/auth-bg.png')] bg-cover bg-center bg-no-repeat text-white pb-20 lg:pb-48 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url('/images/overlay.png')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-20 before:mix-blend-overlay before:z-[-1]">
         <div className="max-w-[1440px] w-full mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 py-4 md:py-6">
           <div role="img" aria-label="Ductape Logo">
@@ -321,140 +321,146 @@ export default function Homepage() {
         </div>
       </header>
 
-      <section className="max-w-[1312px] mx-auto flex flex-col lg:flex-row items-center justify-between mt-36 md:mt-96 px-6 md:px-12 lg:px-16 bg-[#FFFDF9]">
-        <div className="max-w-[542px] text-center md:text-center lg:text-left">
-          <p className="text-lg md:text-xl leading-6 md:leading-8 font-semibold text-[#5F5F5F] py-2 md:py-3">
-            A FULL SERVICE API MARKETPLACE
-          </p>
-          <h2 className="text-3xl md:text-5xl leading-8 md:leading-[60px] font-bold text-grey">
-            Innovate faster, and better, than the competition
-          </h2>
-          <p className="text-base md:text-xl font-medium text-grey py-3 md:py-4">
-            Streamline development with tools to manage APIs, events, jobs, and
-            more—while ensuring your product is resilient and observable in
-            every environment.
-          </p>
-          <div className="md:flex md:justify-center lg:justify-start">
-            <Link
-              href="https://docs.ductape.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="w-full sm:w-[211px] h-[56px] rounded-full px-6 py-3 border flex items-center justify-center gap-3 bg-white border-[#5F5F5F] text-grey hover:shadow-lg hover:bg-white hover:text-grey mx-auto md:mx-0">
-                Read Documentation
-              </Button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="flex flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24 mt-12 lg:mt-0">
-          <div className="relative">
-            <div className="absolute top-0 left-0 w-full h-full bg-primary rounded-lg rotate-[-3deg]"></div>
-            <Image
-              src="/images/female.svg"
-              alt="a woman pressing a laptop"
-              className="relative rotate-3 w-[150px] sm:w-[180px] md:w-[230px] lg:w-[283px]"
-              width={283}
-              height={495}
-            />
+      <section className="mt-36 md:mt-96 px-6 md:px-12 lg:px-16 bg-[#FFFDF9]">
+        <div className="max-w-[1312px] mx-auto flex flex-col lg:flex-row items-center justify-between">
+          <div className="max-w-[542px] text-center md:text-center lg:text-left">
+            <p className="text-lg md:text-xl leading-6 md:leading-8 font-semibold text-[#5F5F5F] py-2 md:py-3">
+              A FULL SERVICE API MARKETPLACE
+            </p>
+            <h2 className="text-3xl md:text-5xl leading-8 md:leading-[60px] font-bold text-grey">
+              Innovate faster, and better, than the competition
+            </h2>
+            <p className="text-base md:text-xl font-medium text-grey py-3 md:py-4">
+              Streamline development with tools to manage APIs, events, jobs,
+              and more—while ensuring your product is resilient and observable
+              in every environment.
+            </p>
+            <div className="md:flex md:justify-center lg:justify-start">
+              <Link
+                href="https://docs.ductape.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full sm:w-[211px] h-[56px] rounded-full px-6 py-3 border flex items-center justify-center gap-3 bg-white border-[#5F5F5F] text-grey hover:shadow-lg hover:bg-white hover:text-grey mx-auto md:mx-0">
+                  Read Documentation
+                </Button>
+              </Link>
+            </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute top-0 left-0 w-full h-full bg-primary rounded-lg rotate-[-3deg]"></div>
-            <Image
-              src="/images/male.svg"
-              alt="a backview of a man"
-              className="relative rotate-3 w-[150px] sm:w-[180px] md:w-[230px] lg:w-[283px]"
-              width={283}
-              height={495}
-            />
-          </div>
-        </div>
-      </section>
+          <div className="flex flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24 mt-12 lg:mt-0">
+            <div className="relative">
+              <div className="absolute top-0 left-0 w-full h-full bg-primary rounded-lg rotate-[-3deg]"></div>
+              <Image
+                src="/images/female.svg"
+                alt="a woman pressing a laptop"
+                className="relative rotate-3 w-[150px] sm:w-[180px] md:w-[230px] lg:w-[283px]"
+                width={283}
+                height={495}
+              />
+            </div>
 
-      <section className="text-center mt-20 md:mt-40 max-w-[90%] md:max-w-[1149px] mx-auto px-4 bg-[#FFFDF9]">
-        <div>
-          <p className="text-lg md:text-xl leading-6 md:leading-[30px] font-semibold text-[#5F5F5F] py-2 md:py-3">
-            WHY DUCTAPE?
-          </p>
-          <p className="text-2xl md:text-5xl leading-8 md:leading-[60px] font-bold text-grey">
-            The Ultimate Platform for Building and Integrating Backend
-            Components
-          </p>
-          <div className="flex items-center justify-center py-4">
-            <DownloadButton className="bg-primary text-white fill-white hover:bg-primary hover:text-white hover:shadow-lg px-6 py-3 rounded-full" />
+            <div className="relative">
+              <div className="absolute top-0 left-0 w-full h-full bg-primary rounded-lg rotate-[-3deg]"></div>
+              <Image
+                src="/images/male.svg"
+                alt="a backview of a man"
+                className="relative rotate-3 w-[150px] sm:w-[180px] md:w-[230px] lg:w-[283px]"
+                width={283}
+                height={495}
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="max-w-[1312px] mx-auto px-6 md:px-12 lg:px-16 py-12 bg-[#FFFDF9]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <div className="md:col-span-2 lg:col-span-3 bg-[#A3C6FB] p-6 md:p-10 rounded-lg shadow-md text-center md:text-left">
-            <p className="text-2xl md:text-4xl font-bold text-grey">
-              Integrate at Lightning Speed
+      <section className="text-center mt-20 md:mt-40  px-4 bg-[#FFFDF9]">
+        <div className="max-w-[90%] md:max-w-[1149px] mx-auto">
+          <div>
+            <p className="text-lg md:text-xl leading-6 md:leading-[30px] font-semibold text-[#5F5F5F] py-2 md:py-3">
+              WHY DUCTAPE?
             </p>
-            <p className="mt-2 text-grey text-sm md:text-base font-medium">
-              Discover and use third-party apps and services effortlessly.
-              Import API actions and use them in code in hours, not weeks.
+            <p className="text-2xl md:text-5xl leading-8 md:leading-[60px] font-bold text-grey">
+              The Ultimate Platform for Building and Integrating Backend
+              Components
             </p>
-            <Image
-              src="/images/integrationdemo.svg"
-              alt="Integration Image"
-              className="mx-auto mt-4"
-              width={500}
-              height={251}
-            />
+            <div className="flex items-center justify-center py-4">
+              <DownloadButton className="bg-primary text-white fill-white hover:bg-primary hover:text-white hover:shadow-lg px-6 py-3 rounded-full" />
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="bg-[#C4B1F9] p-6 md:p-10 text-center rounded-lg shadow-md lg:col-span-2">
-            <Image
-              src="/images/developmentdemo.svg"
-              alt="Development Image"
-              className="mx-auto"
-              width={369}
-              height={214}
-            />
-            <p className="text-2xl md:text-4xl font-bold text-grey mt-4">
-              Simplify Development
-            </p>
-            <p className="mt-2 text-grey text-sm md:text-base font-medium">
-              Define and work with simple components that are automatically
-              reusable and configured for multiple environments and versions.
-            </p>
-          </div>
+      <section className="px-6 md:px-12 lg:px-16 py-12 bg-[#FFFDF9]">
+        <div className="max-w-[1312px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="md:col-span-2 lg:col-span-3 bg-[#A3C6FB] p-6 md:p-10 rounded-lg shadow-md text-center md:text-left">
+              <p className="text-2xl md:text-4xl font-bold text-grey">
+                Integrate at Lightning Speed
+              </p>
+              <p className="mt-2 text-grey text-sm md:text-base font-medium">
+                Discover and use third-party apps and services effortlessly.
+                Import API actions and use them in code in hours, not weeks.
+              </p>
+              <Image
+                src="/images/integrationdemo.svg"
+                alt="Integration Image"
+                className="mx-auto mt-4"
+                width={500}
+                height={251}
+              />
+            </div>
 
-          <div className="bg-[#FFE27B] p-6 md:p-10 text-center rounded-lg shadow-md lg:col-span-2">
-            <Image
-              src="/images/HitRate.svg"
-              alt="Hit Rate"
-              className="mx-auto"
-              width={369}
-              height={214}
-            />
-            <p className="text-2xl md:text-4xl font-bold text-grey mt-4">
-              Stay Resilient
-            </p>
-            <p className="mt-2 text-grey text-sm md:text-base font-medium">
-              Handle downtime with automatic retries, failovers, and provider
-              switching.
-            </p>
-          </div>
+            <div className="bg-[#C4B1F9] p-6 md:p-10 text-center rounded-lg shadow-md lg:col-span-2">
+              <Image
+                src="/images/developmentdemo.svg"
+                alt="Development Image"
+                className="mx-auto"
+                width={369}
+                height={214}
+              />
+              <p className="text-2xl md:text-4xl font-bold text-grey mt-4">
+                Simplify Development
+              </p>
+              <p className="mt-2 text-grey text-sm md:text-base font-medium">
+                Define and work with simple components that are automatically
+                reusable and configured for multiple environments and versions.
+              </p>
+            </div>
 
-          <div className="md:col-span-2 lg:col-span-3 bg-[#A3C6FB] p-6 md:p-10 rounded-lg shadow-md text-center md:text-left">
-            <p className="text-2xl md:text-4xl font-bold text-grey">
-              Full Visibility Across Environments
-            </p>
-            <p className="mt-2 text-grey text-sm md:text-base font-medium">
-              See what’s happening in your system—from dev to production—and
-              catch issues instantly.
-            </p>
-            <Image
-              src="/images/env.svg"
-              alt="Environment"
-              className="mx-auto mt-4 md:mt-10"
-              width={500}
-              height={251}
-            />
+            <div className="bg-[#FFE27B] p-6 md:p-10 text-center rounded-lg shadow-md lg:col-span-2">
+              <Image
+                src="/images/HitRate.svg"
+                alt="Hit Rate"
+                className="mx-auto"
+                width={369}
+                height={214}
+              />
+              <p className="text-2xl md:text-4xl font-bold text-grey mt-4">
+                Stay Resilient
+              </p>
+              <p className="mt-2 text-grey text-sm md:text-base font-medium">
+                Handle downtime with automatic retries, failovers, and provider
+                switching.
+              </p>
+            </div>
+
+            <div className="md:col-span-2 lg:col-span-3 bg-[#A3C6FB] p-6 md:p-10 rounded-lg shadow-md text-center md:text-left">
+              <p className="text-2xl md:text-4xl font-bold text-grey">
+                Full Visibility Across Environments
+              </p>
+              <p className="mt-2 text-grey text-sm md:text-base font-medium">
+                See what’s happening in your system—from dev to production—and
+                catch issues instantly.
+              </p>
+              <Image
+                src="/images/env.svg"
+                alt="Environment"
+                className="mx-auto mt-4 md:mt-10"
+                width={500}
+                height={251}
+              />
+            </div>
           </div>
         </div>
       </section>
