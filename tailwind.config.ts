@@ -10,6 +10,12 @@ const tailwindConfig = {
     				'sans-serif'
     			]
     		},
+			backdropBlur: {
+				ultra: '600px',
+			},
+			screens: {
+				'min-[1312px]': '1312px',
+			},
     		borderRadius: {
     			'10': '10px'
     		},

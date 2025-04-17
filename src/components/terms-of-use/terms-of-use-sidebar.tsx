@@ -43,14 +43,14 @@ export default function TermsOfUseSidebar({ sections }: TermsOfUseSidebarProps) 
   }, [sections])
 
   return (
-    <div className="bg-gray-50 py-4 rounded-lg sticky top-20 px-6 md:px-0">
+    <div className="py-4 rounded-lg sticky top-20 px-6 min-[1312px]:px-0">
       <nav>
         <ul className="space-y-2">
           {sections.map((section) => (
             <li key={section.id}>
               <Link
                 href={`#${section.id}`}
-                className={`block py-1 px-2 rounded text-sm hover:bg-gray-100 text-[18px] font-semibold ${
+                className={`block py-1 px-2 rounded text-sm hover:bg-grey-100 text-[18px] font-semibold ${
                   activeSection === section.id ? " text-primary" : "text-[#818390]"
                 }`}
               >

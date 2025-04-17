@@ -16,7 +16,7 @@ export const faqCategories: FAQCategory[] = [
         id: "how-facilitate-api-monetization",
         question: "How does Ductape facilitate API monetization?",
         answer: [
-          "Ductape empowers you to monetize your APIs by enabling you to publish them as applications that can run on a marketplace. You can define pricing and subscription models, track usage, and manage customer relationships all from a single interface through our dashboard. This streamlined approach allows you to focus on building great APIs while we handle the infrastructure required to provide and promote a consistent revenue stream.",
+          "Ductape empowers you to monetize your APIs by enabling you to publish them as applications and services on a marketplace. You can define pricing and access rules, manage environments and versions, and handle subscriptions directly through your codebase. This streamlined approach allows you to receive monthly payments based on usage, simplifying the monetization process and providing a consistent revenue stream."
         ],
       },
       {
@@ -36,35 +36,35 @@ export const faqCategories: FAQCategory[] = [
         id: "import-api-services",
         question: "How can I import my API services into Ductape?",
         answer: [
-          "Ductape allows you to import your API services through Swagger and OpenAPI documentation. You can upload your API definition to JSON format, enabling Ductape to automatically generate the necessary configurations.",
+          "Ductape allows you to import your API services through Postman and OpenAPI documentation. You can upload your API definitions in JSON format, enabling seamless integration into the Ductape framework."
         ],
       },
       {
         id: "define-authentication-rules",
         question: "How do I define authentication rules for my APIs in Ductape?",
         answer: [
-          "When importing your API services, you can define authentication rules directly within the package framework. This provides settings to implement authentication methods, access controls, and permissions to ensure secure and authorized access to your APIs.",
+          "After importing your API services, you can define authentication rules directly within the Ductape framework. This includes setting up authentication methods, access controls, and permissions to ensure secure and authorized access to your APIs."
         ],
       },
       {
         id: "process-for-publishing-apis",
         question: "What is the process for publishing my APIs to the marketplace?",
         answer: [
-          "Publishing your APIs to the marketplace involves a straightforward approval process. The Ductape management team, after a thorough review, your APIs will be published to the marketplace, making them available to a community of API consumers, developers and businesses.",
+          "Once your APIs are configured and authenticated, you can submit them for approval to the Ductape management team. After a thorough review, your APIs will be published to the marketplace, making them available for consumption by other developers and businesses.",
         ],
       },
       {
         id: "handle-service-providers",
         question: "How does Ductape handle differences between service providers?",
         answer: [
-          "Ductape abstracts the complexities of different service providers, allowing you to define the desired behavior and output in your code. This approach enables you to switch between providers without significant changes, maintaining performance and functionality across various environments.",
+          "Ductape abstracts the complexities of different service providers, allowing you to define the desired behavior and output in your code. This approach enables you to manage differences between providers effectively, ensuring consistent performance and functionality across various environments.",
         ],
       },
       {
         id: "suitable-for-applications",
         question: "Is Ductape suitable for both small projects and large-scale applications?",
         answer: [
-          "Yes, Ductape is designed to be scalable and adaptable, making it suitable for projects of all sizes. From small startups to large enterprises and even large enterprise solutions, the tools provide the tools and flexibility needed to manage projects, configurations, and data reliably, efficiently.",
+          "Yes, Ductape is designed to be scalable and adaptable, making it suitable for projects of all sizes. Whether you’re developing a small application or a large-scale enterprise solution, Ductape provides the tools and flexibility needed to manage products, configurations, and observability effectively.",
         ],
       },
       {
@@ -78,23 +78,23 @@ export const faqCategories: FAQCategory[] = [
         id: "monitor-log-api-usage",
         question: "Can I monitor and log API usage with Ductape?",
         answer: [
-          "Yes, Ductape offers built-in observability features that allow you to monitor API usage, track performance metrics, and log activities directly within your dashboard. These insights help you understand user behavior, optimize performance and usage patterns, facilitating proactive management and troubleshooting.",
+          "Yes, Ductape offers built-in observability features that allow you to monitor API usage, track performance metrics, and log activities directly within your codebase. This integration provides real-time insights into your APIs’ performance and usage patterns, facilitating proactive management and optimization.",
         ],
       },
       {
         id: "get-started",
         question: "How do I get started with Ductape?",
         answer: [
-          "To get started with Ductape, visit our Getting Started Guide for detailed instructions on installation, configuration, and integration. Our comprehensive documentation covers everything from basic setup to advanced features, helping you make the most of Ductape's capabilities from day one.",
+          "To get started with Ductape, visit our Getting Started Guide for detailed instructions on installation, configuration, and integration. Our comprehensive documentation and support resources are available to assist you throughout the setup process.",
         ],
       },
       {
         id: "more-information",
         question: "Where can I find more information and support?",
         answer: [
-          "For more information, visit our Documentation and Community Forum. If you have specific questions or need further guidance, feel free to contact our support team directly.",
+          "For more information, visit our Documentation and Community Forum. If you have specific questions or need further assistance, feel free to contact our support team at support@ductape.com.",
 
-          "If you have any other questions or need further assistance, please don't hesitate to reach out to us.",
+          "If you have any other questions or need further assistance, please don’t hesitate to reach out to us",
         ],
       },
     ],

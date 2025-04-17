@@ -10,6 +10,7 @@ export default function UseCaseItem({ useCase, reverse = false }: UseCaseItemPro
   return (
     <div className="grid md:grid-cols-2 gap-8 md:gap-20 items-start py-10 px-6 md:px-0">
       <div className={`space-y-4 ${reverse ? "md:order-2 md:text-left" : ""} text-left pt-10`}>
+        <p className="text-2xl font-extrabold text-[#818390]">{useCase.digit}</p>
         <h2 className="text-2xl font-semibold text-grey">{useCase.title}</h2>
         <p className="text-grey text-[18px] font-medium">{useCase.description}</p>
 

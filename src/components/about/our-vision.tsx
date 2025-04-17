@@ -4,14 +4,14 @@ import JoinJourney from "./join-journey"
 export default function OurVision() {
   return (
     <section className="py-16 md:py-24">
-      <div className="max-w-[1312px] w-full mx-auto">
+      <div className="max-w-[1312px] w-full mx-auto px-6 md:px-12 min-[1312px]:px-0">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-[300px] md:h-[500px] max-w-[500px] w-[500px]">
-            <div className="absolute top-0 left-0 w-full h-full bg-primary rounded-[10px] rotate-[-3deg] shadow-lg"></div>
+          <div className="relative mx-auto">
+            <div className="absolute top-0 left-0 w-[230px] sm:w-[230px] md:w-[400px] lg:w-[500px] h-full bg-primary rounded-[10px] rotate-[-3deg] shadow-lg"></div>
             <Image
               src="/images/vision.svg"
               alt="vision concept"
-              className="relative z-[1] rotate-3 w-[150px] sm:w-[180px] md:w-[230px] lg:w-full rounded-[10px]"
+              className="relative z-[1] rotate-3 w-[230px] sm:w-[230px] md:w-[400px] lg:w-[500px] rounded-[10px]"
               width={500}
               height={500}
             />

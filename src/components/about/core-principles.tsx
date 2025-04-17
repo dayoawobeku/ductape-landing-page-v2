@@ -7,8 +7,8 @@ interface CorePrinciplesProps {
 
 export default function CorePrinciples({ values }: CorePrinciplesProps) {
   return (
-    <section className="py-16 bg-[#FFF]">
-      <div className="max-w-[1312px] w-full mx-auto">
+    <section className="py-16">
+      <div className="max-w-[1312px] w-full mx-auto px-6 md:px-12 min-[1312px]:px-0">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-grey text-center">Our Core Principles</h2>
         <p className="text-center max-w-2xl mx-auto mb-12 text-grey text-xl font-medium">
           In today&apos;s fast-paced digital landscape, adaptability is paramount. That&apos;s why we are committed to two core

@@ -136,7 +136,6 @@ export default function Header() {
               <Link
                 href={item.path}
                 key={item.path}
-                target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {
                   handleClick();

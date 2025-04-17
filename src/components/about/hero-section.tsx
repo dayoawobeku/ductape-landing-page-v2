@@ -3,9 +3,9 @@ import Image from "next/image"
 export default function HeroSection() {
   return (
     <section className="py-16 md:py-16">
-      <div className="max-w-[1312px] w-full mx-auto">
+      <div className="max-w-[1312px] w-full mx-auto px-6 md:px-12 min-[1312px]:px-0">
         <div className="grid gap-8 md:grid-cols-2 md:gap-20 items-center ">
-          <div className="w-[644px]">
+          <div className="max-w-[644px]">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-grey">
               Building the Bridges of Automation
             </h1>
@@ -25,16 +25,17 @@ export default function HeroSection() {
               </p>
             </div>
           </div>
-          <div className="relative h-[300px] md:h-[500px] max-w-[500px] w-[500px] ml-16">
-           <div className="absolute top-0 left-0 w-full h-full bg-primary rounded-[10px] rotate-[-3deg] shadow-lg"></div>
-              <Image
-                src="/images/automation-bridge.svg"
+         
+             <div className="relative mx-auto">
+                        <div className="absolute top-0 left-0 w-[230px] sm:w-[230px] md:w-[400px] lg:w-[500px] h-full bg-primary rounded-[10px] rotate-[-3deg] shadow-lg"></div>
+                        <Image
+                           src="/images/automation-bridge.svg"
                 alt="Automation bridge concept"
-                className="relative z-[1] rotate-3 w-[150px] sm:w-[180px] md:w-[230px] lg:w-full rounded-[10px]"
-                width={500}
-                height={500}
-              />
-            </div>
+                          className="relative z-[1] rotate-3 w-[230px] sm:w-[230px] md:w-[400px] lg:w-[500px] rounded-[10px]"
+                          width={500}
+                          height={500}
+                        />
+                      </div>
         </div>
       </div>
     </section>

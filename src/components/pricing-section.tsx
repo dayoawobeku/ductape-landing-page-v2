@@ -12,7 +12,7 @@ interface PricingSectionProps {
 
 export default function PricingSection({ plans }: PricingSectionProps) {
   return (
-    <section className="bg-white bg-opacity-30 py-16 sm:px-4 md:px-0">
+    <section className=" py-16 px-6 sm:px-6 md:px-12 min-[1312px]:px-0">
       <div className="max-w-[1312px] w-full mx-auto">
         <h1 className="mb-10 text-center text-3xl font-bold text-grey md:text-5xl">
           Choose a plan that&apos;s right for your company

@@ -9,8 +9,8 @@ interface FAQsSectionProps {
 
 export default function FAQsSection({ faqs }: FAQsSectionProps) {
   return (
-    <section className="bg-[#FFF8E7] py-16 sm:px-4 md:px-0">
-  <div className="mx-auto w-full flex flex-col md:flex-row justify-between gap-32 max-w-[1312px]">
+    <section className="bg-[#FFF8E7] py-16 px-6 sm:px-6 md:px-12 min-[1312px]:px-0">
+  <div className="mx-auto w-full flex flex-col md:flex-row justify-between sm:gap-10 md:gap-32 max-w-[1312px]">
     {/* Left side: Heading + Link */}
     <div className="md:w-1/3">
       <h2 className="mb-8 text-5xl font-bold text-grey">Pricing FAQs</h2>
@@ -27,7 +27,7 @@ export default function FAQsSection({ faqs }: FAQsSectionProps) {
       <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq) => (
           <AccordionItem key={faq.id} value={faq.id} className="border-b border-grey-400">
-            <AccordionTrigger className="py-4 text-left text-2xl font-semibold text-grey no-underline hover:no-underline">
+            <AccordionTrigger className="py-8 text-left text-2xl font-semibold text-grey no-underline hover:no-underline">
               {faq.question}
             </AccordionTrigger>
             <AccordionContent className="py-4 text-[18px] text-grey font-medium">

@@ -3,6 +3,7 @@ import type { UseCase } from "../types/use-case"
 export const useCases: UseCase[] = [
   {
     id: "api-management",
+    digit: "01",
     title: "API-First Digital Asset Management",
     description:
       "Ductape enables organizations to build, manage, and monetize APIs as digital assets, creating new revenue streams while maintaining control over access and usage.",
@@ -17,6 +18,7 @@ export const useCases: UseCase[] = [
   },
   {
     id: "data-integration",
+    digit: "02",
     title: "Data Integration Orchestration",
     description:
       "Streamline complex data flows between disparate systems with Ductape's integration capabilities, reducing development time and maintenance overhead.",
@@ -31,6 +33,7 @@ export const useCases: UseCase[] = [
   },
   {
     id: "microservices",
+    digit: "02",
     title: "Microservice Interoperability",
     description:
       "Enable smooth communication between microservices with standardized interfaces, reducing complexity and accelerating development cycles.",
@@ -45,6 +48,7 @@ export const useCases: UseCase[] = [
   },
   {
     id: "iot-platform",
+    digit: "03",
     title: "IoT Device Connectivity",
     description:
       "Connect, manage, and process data from IoT devices at scale with Ductape's specialized IoT integration capabilities.",
@@ -59,6 +63,7 @@ export const useCases: UseCase[] = [
   },
   {
     id: "fintech",
+    digit: "04",
     title: "Fintech Integrations",
     description:
       "Securely connect with financial services APIs and build compliant fintech applications with Ductape's specialized financial connectors.",
@@ -75,6 +80,7 @@ export const useCases: UseCase[] = [
   },
   {
     id: "ai-ml-integration",
+    digit: "05",
     title: "AI and Machine Learning Model Integration",
     description:
       "Seamlessly incorporate AI and ML models into your applications with Ductape's specialized connectors and deployment tools.",
@@ -89,6 +95,7 @@ export const useCases: UseCase[] = [
   },
   {
     id: "healthcare",
+    digit: "06",
     title: "Healthcare Systems Integration",
     description:
       "Connect disparate healthcare systems while maintaining HIPAA compliance and ensuring patient data security.",
@@ -103,6 +110,7 @@ export const useCases: UseCase[] = [
   },
   {
     id: "retail-ecommerce",
+    digit: "07",
     title: "Retail and E-commerce Integrations",
     description:
       "Unify your e-commerce ecosystem by connecting storefronts, inventory systems, payment processors, and fulfillment services.",
@@ -117,6 +125,7 @@ export const useCases: UseCase[] = [
   },
   {
     id: "devops",
+    digit: "08",
     title: "DevOps Toolchain Integration",
     description: "Streamline your development pipeline by connecting various DevOps tools and automating workflows.",
     keyPoints: [
@@ -130,6 +139,7 @@ export const useCases: UseCase[] = [
   },
   {
     id: "saas-integration",
+    digit: "09",
     title: "SaaS Platform Extensibility",
     description:
       "Extend your SaaS platform's capabilities by enabling seamless third-party integrations and building a robust ecosystem.",

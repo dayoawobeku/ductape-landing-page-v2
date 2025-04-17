@@ -6,7 +6,7 @@ import TermsOfUseSidebar from "@/components/terms-of-use/terms-of-use-sidebar"
 export default function PrivacyPolicyPage() {
   return (
     <Layout>
-      <div className="max-w-[1312px] w-full mx-auto py-12">
+      <div className="max-w-[1312px] w-full mx-auto py-12 mb-10 sm:px-4 md:px-12 min-[1312px]:px-0">
         <div className="flex flex-col lg:flex-row gap-8">
           <aside className="lg:w-1/5 shrink-0 pr-4">
             <TermsOfUseSidebar sections={TermsOfUseSections} />

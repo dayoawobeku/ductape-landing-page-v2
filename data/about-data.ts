@@ -28,7 +28,7 @@ export const whyDuctapeReasons: WhyDuctapeReason[] = [
     id: "flexibility",
     title: "Flexibility",
     description:
-      "Customize your system by selecting only the resources you need, making it easier to meet new challenges without overwhelming your architecture.",
+     "Customize your system by selecting only the resources you need, making it easier to meet new challenges without overhauling your entire architecture.",
   },
   {
     id: "scalability",
