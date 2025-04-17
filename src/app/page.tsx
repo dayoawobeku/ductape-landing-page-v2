@@ -12,17 +12,19 @@ const navItems = [
   },
   {
     name: "Use Cases",
-    path: "",
+    path: "/use-cases",
   },
   {
     name: "Pricing",
-    path: "https://docs.ductape.app/pricing",
+    path: "/pricing",
   },
   {
     name: "FAQS",
-    path: "",
+    path: "/faqs",
   },
 ];
+
+/**https://docs.ductape.app */
 
 function QuickLinks() {
   const sections = [
@@ -47,17 +49,17 @@ function QuickLinks() {
     {
       title: "Company",
       links: [
-        { name: "About Us", path: "" },
-        { name: "Use Cases", path: "" },
+        { name: "About Us", path: "/about" },
+        { name: "Use Cases", path: "/use-cases" },
         { name: "Contact", path: "" },
       ],
     },
     {
       title: "Legal",
       links: [
-        { name: "Privacy Policy", path: "" },
+        { name: "Privacy Policy", path: "/privacy-policy" },
         { name: "Developer Policy", path: "" },
-        { name: "Terms of Use", path: "" },
+        { name: "Terms of Use", path: "/terms-of-use" },
       ],
     },
   ];
@@ -76,7 +78,6 @@ function QuickLinks() {
                   <Link
                     href={link.path}
                     className="text-base text-white font-medium hover:text-grey-400"
-                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     {link.name}
@@ -172,29 +173,30 @@ export default function Homepage() {
     setIsFading(true);
     setTimeout(() => {
       setIsFading(false);
-    }, 300);
+    }, 0);
   };
 
   return (
     <main className="bg-[#FFFDF9]">
       <header className="relative text-center bg-[url('/images/auth-bg.png')] bg-cover bg-center bg-no-repeat text-white pb-20 lg:pb-48 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url('/images/overlay.png')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-20 before:mix-blend-overlay before:z-[-1]">
         <div className="max-w-[1440px] w-full mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 py-4 md:py-6">
+          <Link href = "#">
           <div role="img" aria-label="Ductape Logo">
             <p className="text-white text-2xl md:text-3xl font-black uppercase leading-9">
               ductape
             </p>
           </div>
+          </Link>
 
           <nav
             className={`hidden lg:flex items-center justify-center gap-4 md:gap-6 lg:gap-10 transition-opacity duration-300 ${
-              isFading ? "opacity-0" : "opacity-100"
+              isFading ? "opacity-50" : "opacity-100"
             }`}
           >
             {navItems.map((item) => (
               <Link
                 href={item.path}
                 key={item.path}
-                target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-base text-white hover:no-underline"
                 onClick={() => handleClick()}
@@ -244,7 +246,6 @@ export default function Homepage() {
               <Link
                 href={item.path}
                 key={item.path}
-                target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {
                   handleClick();
