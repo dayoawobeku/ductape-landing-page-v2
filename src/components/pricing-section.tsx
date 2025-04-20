@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Check } from "lucide-react"
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs"
 import { Button } from "./ui/button"
@@ -10,6 +11,21 @@ interface PricingSectionProps {
 }
 
 export default function PricingSection({ plans }: PricingSectionProps) {
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly")
+
+  const formatPrice = (price: string) => {
+    if (price === "Free") return "Free"
+    const numericPrice = parseFloat(price.replace(/[^0-9.]/g, ""))
+    if (isNaN(numericPrice)) return price
+
+    if (billingCycle === "yearly") {
+      const yearlyPrice = numericPrice * 12 * 0.8
+      return `$${yearlyPrice.toFixed(2)}`
+    }
+
+    return `$${numericPrice.toFixed(2)}`
+  }
+
   return (
     <section className="py-12 px-4 sm:px-4 md:px-8 min-[1312px]:px-0">
       <div className="max-w-[1312px] w-full mx-auto">
@@ -19,7 +35,7 @@ export default function PricingSection({ plans }: PricingSectionProps) {
 
         {/* Pricing Toggle */}
         <div className="mb-10 flex justify-center items-center">
-          <Tabs defaultValue="monthly" className="w-[329px] max-h-[48px]">
+          <Tabs defaultValue={billingCycle} onValueChange={(value) => setBillingCycle(value as "monthly" | "yearly")} className="w-[329px] max-h-[48px]">
             <TabsList className="grid w-full grid-cols-2 rounded-full bg-white shadow-[0px_4px_10px_2px_#2328301A] h-full p-1.5 justify-center gap-1.5">
               <TabsTrigger value="monthly" className="rounded-full text-lg font-semibold text-grey">
                 Monthly
@@ -43,10 +59,16 @@ export default function PricingSection({ plans }: PricingSectionProps) {
                 <p className="text-sm text-grey font-normal max-w-[308px]">{plan.description}</p>
               </div>
               <div className="px-3 pb-8">
-                {plan.price !== "Free" && <p className="text-sm text-grey font-semibold">Starting at</p>}
+                {plan.price !== "Free" && (
+                  <p className="text-sm text-grey font-semibold">
+                    {billingCycle === "yearly" ? "Billed annually" : "Starting at"}
+                  </p>
+                )}
                 <h2 className="text-4xl font-bold text-grey">
-                  {plan.price}
-                  {plan.price !== "Free" && <span className="text-xl font-bold">/month</span>}
+                  {formatPrice(plan.price)}
+                  {plan.price !== "Free" && (
+                    <span className="text-xl font-bold">{billingCycle === "monthly" ? "/month" : "/year"}</span>
+                  )}
                 </h2>
               </div>
               <Button className="max-h-[48px] h-full mb-4 w-full bg-primary hover:bg-primary py-[12px] px-[20px] rounded-full text-white text-sm font-semibold">
