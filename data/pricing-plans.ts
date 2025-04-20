@@ -79,7 +79,7 @@ export const pricingPlans: PricingPlan[] = [
     id: "enterprise",
     name: "Enterprise Plan",
     description: "Best for large scale organizations and enterprises",
-    price: "$499",
+    price: "$Custom",
     buttonText: "Contact Sales",
     features: [
       "Custom limits and scalability based on business requirements",
