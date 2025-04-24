@@ -32,7 +32,7 @@ function DownloadButton({ className = "" }: DownloadButtonProps) {
 
   return (
     <Link
-      href="https://www.npmjs.com/package/ductape-sdk"
+      href="https://www.npmjs.com/package/@ductape/sdk"
       target="_blank"
       rel="noopener noreferrer"
     >
