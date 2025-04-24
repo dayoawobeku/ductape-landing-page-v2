@@ -7,7 +7,7 @@ import { Button } from "../components/ui/button";
 const navItems = [
   {
     name: "Developers",
-    path: "",
+    path: "https://docs.ductape.app",
   },
   {
     name: "Use Cases",

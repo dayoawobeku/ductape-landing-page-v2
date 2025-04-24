@@ -8,7 +8,7 @@ import Image from "next/image";
 const navItems = [
   {
     name: "Developers",
-    path: "",
+    path: "https://docs.ductape.app",
   },
   {
     name: "Use Cases",

@@ -12,15 +12,24 @@ export default function UseCaseItem({ useCase, reverse = false }: UseCaseItemPro
       <div className={`space-y-4 ${reverse ? "md:order-2 md:text-left" : ""} text-left pt-10`}>
         <p className="text-2xl font-extrabold text-[#818390]">{useCase.digit}</p>
         <h2 className="text-2xl font-semibold text-grey">{useCase.title}</h2>
-        <p className="text-grey text-[18px] font-medium">{useCase.description}</p>
 
-        {useCase.keyPoints && useCase.keyPoints.length > 0 && (
+        <h3 className="text-grey text-[18px] font-bold mb-2">Scenario:</h3>
+        <p className="text-grey text-[18px] font-medium">{useCase.scenario}</p>
+
+        {useCase.helps && (
           <div className="mt-4">
-            <h3 className="text-grey text-[18px] font-bold mb-2 ">Key Features:</h3>
+          <h3 className="text-grey text-[18px] font-bold mb-2">How Ductape Helps:</h3>
+          <p className="text-grey text-[18px] font-medium">{useCase.helps}</p>
+        </div>
+        )}
+
+        {useCase.matters && useCase.matters.length > 0 && (
+          <div className="mt-4">
+            <h3 className="text-grey text-[18px] font-bold mb-2 ">Why It Matters:</h3>
             <ul className="space-y-2">
-              {useCase.keyPoints.map((point, index) => (
+              {useCase.matters.map((point, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-[#1e40af] mr-2">•</span>
+                  <span className="text-[#1e40af] mr-2">-</span>
                   <span className="text-grey text-[18px] font-medium">{point}</span>
                 </li>
               ))}
@@ -28,32 +37,20 @@ export default function UseCaseItem({ useCase, reverse = false }: UseCaseItemPro
           </div>
         )}
 
-        {useCase.benefits && useCase.benefits.length > 0 && (
-          <div className="mt-4">
-            <h3 className="text-grey text-[18px] font-bold mb-2 ">Benefits:</h3>
-            <ul className="space-y-2">
-              {useCase.benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="text-[#1e40af] mr-2">•</span>
-                  <span className="text-grey text-[18px] font-medium">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        
 
-        {useCase.caseStudy && (
+        {useCase.bonus && (
           <div className="mt-4">
-            <h3 className="text-grey text-[18px] font-bold mb-2">Case Study:</h3>
-            <p className="text-grey text-[18px] font-medium">{useCase.caseStudy}</p>
+            <h3 className="text-grey text-[18px] font-bold mb-2">Bonus:</h3>
+            <p className="text-grey text-[18px] font-medium">{useCase.bonus}</p>
           </div>
         )}
       </div>
 
       <div className={`${reverse ? "md:order-1" : ""}`}>
         <div
-          className="relative h-64 md:h-[710px] rounded-lg overflow-hidden bg-[#FFE27B]"
-         
+          className={`relative h-64 md:h-[710px] rounded-lg overflow-hidden`}
+          style={{ backgroundColor: useCase.chartBackground }}
         >
           <Image
             src={useCase.chartImage || "/placeholder.svg"}
