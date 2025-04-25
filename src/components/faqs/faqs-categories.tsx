@@ -51,11 +51,17 @@ export default function FAQsCategories({ categories }: FAQsCategoriesProps) {
                   {expandedQuestions[question.id] && (
                     <div className="p-4">
                       <div className="prose prose-blue max-w-none text-grey">
-                        {question.answer.map((paragraph, idx) => (
-                          <p key={idx} className="mb-4 last:mb-0 text-lg font-medium ">
-                            {paragraph}
+                        {Array.isArray(question.answer) ? (
+                          question.answer.map((paragraph, idx) => (
+                            <p key={idx} className="mb-4 last:mb-0 text-lg font-medium ">
+                              {paragraph}
+                            </p>
+                          ))
+                        ) : (
+                          <p className="mb-4 last:mb-0 text-lg font-medium ">
+                            {question.answer}
                           </p>
-                        ))}
+                        )}
                       </div>
                     </div>
                   )}

@@ -107,14 +107,19 @@ export const faqCategories: FAQCategory[] = [
         id: "what-is-workspace",
         question: "What is a workspace?",
         answer: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id risus velit. Nulla dui nisi, condimentum ut risus a, placerat ultricies ipsum. Ut bibendum quam et amet nec egestas. Duis et vulputate quam, ac viverra quam. Suspendisse potenti. Donec vel diam nec eros varius auctor. Sed eget convallis id. Vestibulum felis ipsum.",
+          "A Ductape workspace is a shared environment where a team can collaborate, with its own connected APIs, environment variables, webhooks and event listeners, logs and monitoring, auth settings, and packaged workflows or features.",
         ],
       },
       {
         id: "how-many-workspaces",
         question: "How many workspaces can you belong to?",
         answer: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id risus velit. Nulla dui nisi, condimentum ut risus a, placerat ultricies ipsum. Ut bibendum quam et amet nec egestas. Duis et vulputate quam, ac viverra quam. Suspendisse potenti. Donec vel diam nec eros varius auctor. Sed eget convallis id. Vestibulum felis ipsum.",
+          "You can belong to unlimited workspaces on any plan, but the number of users per workspace is limited based on your plan.",
+          "Free Plan: Up to 2 users per workspace",
+          "Beginner Plan: Up to 5 users per workspace",
+          "Startup Plan: Up to 15 users per workspace",
+          "Enterprise Plan: Unlimited users per workspace",
+          "So while you can join or create as many workspaces as you like, each workspace’s user capacity depends on its plan."
         ],
       },
     ],
@@ -125,16 +130,61 @@ export const faqCategories: FAQCategory[] = [
     questions: [
       {
         id: "question-number-1",
-        question: "Question number 1",
+        question: "Do you charge for extra actions when I go over my limit?",
         answer: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id risus velit. Nulla dui nisi, condimentum ut risus a, placerat ultricies ipsum. Ut bibendum quam et amet nec egestas. Duis et vulputate quam, ac viverra quam. Suspendisse potenti. Donec vel diam nec eros varius auctor. Sed eget convallis id. Vestibulum felis ipsum.",
+          "Yes. If you exceed your plan’s monthly limits (API requests or file transfer), you’ll be billed for overages:",
+          "API Requests: $0.00001 per request",
+          "File Transfers: $0.0075 per GB"
         ],
       },
       {
         id: "question-number-2",
-        question: "Question number 2",
+        question: "When will I be billed?",
         answer: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id risus velit. Nulla dui nisi, condimentum ut risus a, placerat ultricies ipsum. Ut bibendum quam et amet nec egestas. Duis et vulputate quam, ac viverra quam. Suspendisse potenti. Donec vel diam nec eros varius auctor. Sed eget convallis id. Vestibulum felis ipsum.",
+          "You’ll be billed monthly on your subscription date. For Enterprise customers, custom billing cycles may be arranged.",
+        ],
+      },
+      {
+        id: "question-number-3",
+        question: "Are you going to change your pricing in the future?",
+        answer: [
+          "We may adjust pricing as Ductape evolves, but any changes will be communicated clearly in advance. Existing customers will be given options to stay on their current plan or transition to new ones where applicable.",
+        ],
+      },
+      {
+        id: "question-number-4",
+        question: "What happens if I go over my request or file transfer limits?",
+        answer: [
+          "You’ll still be able to use Ductape, but you’ll be billed for any overages at your plan’s rate",
+        ],
+      },
+      {
+        id: "question-number-5",
+        question: "How much do overages cost for each plan?",
+        answer: [
+          "Free Plan:",
+          "API Requests: $0.000025/request",
+          "File Transfer: $0.0125/GB",
+          "Beginner Plan:",
+          "API Requests: $0.00002/request",
+          "File Transfer: $0.010/GB",
+          "Startup Plan:",
+          "API Requests: $0.000015/request",
+          "File Transfer: $0.008/GB",
+        ],
+      },
+      {
+        id: "question-number-6",
+        question: "Will I be notified before hitting my limits?",
+        answer: [
+          "Yes. Ductape alerts you when you’re approaching your usage limits so you can monitor or upgrade your plan before incurring charges.",
+        ],
+      },
+      {
+        id: "question-number-7",
+        question: "Do overages roll over to the next month?",
+        answer: [
+          "No. Usage limits reset at the beginning of each billing cycle. Overage charges only apply to the current month.",
         ],
       },
     ],

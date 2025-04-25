@@ -1,7 +1,7 @@
 export interface FAQ {
   id: string
   question: string
-  answer: string[]
+  answer: string | string[]
 }
 
 export interface FAQCategory {

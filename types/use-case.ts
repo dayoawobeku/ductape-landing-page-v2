@@ -2,10 +2,11 @@ export interface UseCase {
   id: string
   title: string
   digit: string
-  description: string
-  keyPoints?: string[]
-  benefits?: string[]
+  scenario: string
+  helps: string
+  matters?: string[]
   caseStudy?: string
+  bonus: string
   chartImage: string
   chartBackground?: string
 }

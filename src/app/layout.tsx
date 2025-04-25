@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Head from 'next/head';
 
 
 export const metadata: Metadata = {
@@ -15,11 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="shortcut icon" href="/images/ductape.png" type="image/png" />
-      </Head>
-      <body
-      >
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body>
         {children}
       </body>
     </html>
