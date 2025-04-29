@@ -8,7 +8,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-[url('/images/bg.svg')]/30 bg-cover bg-center w-full backdrop-blur-ultra">
+    <div className="flex min-h-screen flex-col bg-[url('/images/bg.svg')]/30 bg-cover bg-center w-full backdrop-blur-ultra scroll-smooth">
       <Header />
       {children}
       <Footer />

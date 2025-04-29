@@ -12,6 +12,11 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 input[type="search"] {
   background: #fff url("/images/search.svg") no-repeat left 8px center;
 }
