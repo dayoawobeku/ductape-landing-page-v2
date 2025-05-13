@@ -285,7 +285,7 @@ export default function Homepage() {
           <p className="text-base md:text-xl font-medium max-w-[90%] md:max-w-[780px] mt-4">
             Ductape empowers developers to create reusable components, integrate
             third-party apps, and build complex, scalable, and monitored systems
-            in code—all in hours, not weeks.
+            in code. All in hours, not weeks.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 py-8">
             <DownloadButton />
@@ -333,7 +333,7 @@ export default function Homepage() {
             </h2>
             <p className="text-base md:text-xl font-medium text-grey py-3 md:py-4">
               Streamline development with tools to manage APIs, events, jobs,
-              and more—while ensuring your product is resilient and observable
+              and more. While ensuring your product is resilient and observable
               in every environment.
             </p>
             <div className="md:flex md:justify-center lg:justify-start">
@@ -451,7 +451,7 @@ export default function Homepage() {
                 Full Visibility Across Environments
               </p>
               <p className="mt-2 text-grey text-sm md:text-base font-medium">
-                See what’s happening in your system—from dev to production—and
+                See what’s happening in your system. From dev to production, and
                 catch issues instantly.
               </p>
               <Image
@@ -567,7 +567,7 @@ export default function Homepage() {
             </p>
             <p className="text-lg md:text-xl font-medium w-full max-w-[780px] px-4 md:px-10 py-5">
               Ductape gives you the tools to create, integrate, and manage
-              components and services at breakneck speed—without sacrificing
+              components and services at breakneck speed without sacrificing
               reliability or control.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 py-8 md:py-10">
