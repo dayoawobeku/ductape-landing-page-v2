@@ -573,7 +573,7 @@ export default function Homepage() {
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 py-8 md:py-10">
               <DownloadButton className="bg-primary text-white hover:bg-primary hover:text-white hover:shadow-lg" />
               <Link
-                href="https://discord.gg/kAvdDney"
+                href="https://discord.gg/JHXxQ6MAwb"
                 target="_blank"
                 rel="noopener noreferrer"
               >
