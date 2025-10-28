@@ -126,44 +126,44 @@ function DownloadButton({ className = "" }: DownloadButtonProps) {
   );
 }
 
-const featuresCards = [
-  {
-    icon: "/images/AR.svg",
-    title: "Fast Third-Party Integrations",
-    description:
-      "Quickly implement third-party API actions and services in your codebase.",
-  },
-  {
-    icon: "/images/rocket.svg",
-    title: "Reusable Components",
-    description:
-      "Standardize your approach to APIs, databases, notifications, and cloud functions.",
-  },
-  {
-    icon: "/images/gear-AI.svg",
-    title: "Event-Driven Features",
-    description:
-      "Build and monitor robust event workflows with retries and error handling baked in.",
-  },
-  {
-    icon: "/images/target.svg",
-    title: "Background Jobs & Functions",
-    description:
-      "Create scalable, fault-tolerant jobs and serverless functions.",
-  },
-  {
-    icon: "/images/terminal.svg",
-    title: "Unified Communication",
-    description:
-      "Manage emails and notifications across services without extra complexity.",
-  },
-  {
-    icon: "/images/code-2.svg",
-    title: "Monitor Everything",
-    description:
-      "Keep tabs on all actions, events, and jobs across all environments in real time.",
-  },
-];
+// const featuresCards = [
+//   {
+//     icon: "/images/AR.svg",
+//     title: "Fast Third-Party Integrations",
+//     description:
+//       "Quickly implement third-party API actions and services in your codebase.",
+//   },
+//   {
+//     icon: "/images/rocket.svg",
+//     title: "Reusable Components",
+//     description:
+//       "Standardize your approach to APIs, databases, notifications, and cloud functions.",
+//   },
+//   {
+//     icon: "/images/gear-AI.svg",
+//     title: "Event-Driven Features",
+//     description:
+//       "Build and monitor robust event workflows with retries and error handling baked in.",
+//   },
+//   {
+//     icon: "/images/target.svg",
+//     title: "Background Jobs & Functions",
+//     description:
+//       "Create scalable, fault-tolerant jobs and serverless functions.",
+//   },
+//   {
+//     icon: "/images/terminal.svg",
+//     title: "Unified Communication",
+//     description:
+//       "Manage emails and notifications across services without extra complexity.",
+//   },
+//   {
+//     icon: "/images/code-2.svg",
+//     title: "Monitor Everything",
+//     description:
+//       "Keep tabs on all actions, events, and jobs across all environments in real time.",
+//   },
+// ];
 
 export default function Homepage() {
   const [isFading, setIsFading] = useState(false);
@@ -278,14 +278,12 @@ export default function Homepage() {
                 alt="build circle"
                 loading="lazy"
               />
-              Build
+              Move
             </span>
             fast without breaking things
           </h1>
-          <p className="text-base md:text-xl font-medium max-w-[90%] md:max-w-[780px] mt-4">
-            Ductape empowers developers to create reusable components, integrate
-            third-party apps, and build complex, scalable, and monitored systems
-            in code. All in hours, not weeks.
+          <p className="text-base md:text-xl font-medium max-w-[90%] md:max-w-[780px] my-5">
+            Ductape helps you easily and quickly compose, debug, and reuse backend components.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 py-8">
             <DownloadButton />
@@ -324,239 +322,193 @@ export default function Homepage() {
 
       <section className="mt-36 md:mt-96 px-6 md:px-12 lg:px-16 bg-[#FFFDF9]">
         <div className="max-w-[1312px] mx-auto flex flex-col lg:flex-row items-center justify-between">
-          <div className="max-w-[542px] text-center md:text-center lg:text-left">
-            <p className="text-lg md:text-xl leading-6 md:leading-8 font-semibold text-[#5F5F5F] py-2 md:py-3">
-              A FULL SERVICE API MARKETPLACE
-            </p>
-            <h2 className="text-3xl md:text-5xl leading-8 md:leading-[60px] font-bold text-grey">
-              Innovate faster, and better, than the competition
-            </h2>
-            <p className="text-base md:text-xl font-medium text-grey py-3 md:py-4">
-              Streamline development with tools to manage APIs, events, jobs,
-              and more. While ensuring your product is resilient and observable
-              in every environment.
-            </p>
-            <div className="md:flex md:justify-center lg:justify-start">
-              <Link
-                href="https://docs.ductape.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="w-full sm:w-[211px] h-[56px] rounded-full px-6 py-3 border flex items-center justify-center gap-3 bg-white border-[#5F5F5F] text-grey hover:shadow-lg hover:bg-white hover:text-grey mx-auto md:mx-0">
-                  Read Documentation
-                </Button>
-              </Link>
-            </div>
+          <div className="max-w-[542px] text-center md:text-center lg:text-left text-[#475569]">
+            <div className="mb-8 border-l-4 border-primary p-4 bg-transparent hover:bg-[#e6ebff]">
+        <h4 className="text-xl font-semibold text-[#0f172a] mb-2">1. Import or paste endpoints</h4>
+        <p>Paste a URL or upload a Postman collection. Ductape turns each into a function you can call.</p>
+      </div>
+
+      <div className="mb-8 border-l-4 border-primary p-4 bg-transparent hover:bg-[#e6ebff]">
+        <h4 className="text-xl font-semibold text-[#0f172a] mb-2">2. Treat backend components like functions</h4>
+        <p>Databases, storage, notifiers, and more can be connected as callable functions in your workflows.</p>
+      </div>
+
+      <div className="mb-8 border-l-4 border-primary p-4 bg-transparent hover:bg-[#e6ebff]">
+        <h4 className="text-xl font-semibold text-[#0f172a] mb-2">3. Compose backend features</h4>
+        <p>Chain functions, database calls, and custom logic into end-to-end workflows.</p>
+      </div>
+
+      <div className="mb-8 border-l-4 border-primary p-4 bg-transparent hover:bg-[#e6ebff]">
+        <h4 className="text-xl font-semibold text-[#0f172a] mb-2">4. Run and debug with confidence</h4>
+        <p>Execute your workflows, trace each step, inspect inputs and outputs, and fix issues fast.</p>
+      </div>
+
+      <div className="mb-8 border-l-4 border-primary p-4 bg-transparent hover:bg-[#e6ebff]">
+        <h4 className="text-xl font-semibold text-[#0f172a] mb-2">5. Share with your team</h4>
+        <p>Once a workflow works, share it with teammates for reuse or further iteration.</p>
+      </div>
           </div>
 
-          <div className="flex flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24 mt-12 lg:mt-0">
-            <div className="relative">
-              <div className="absolute top-0 left-0 w-full h-full bg-primary rounded-lg rotate-[-3deg]"></div>
-              <Image
-                src="/images/female.svg"
-                alt="a woman pressing a laptop"
-                className="relative rotate-3 w-[150px] sm:w-[180px] md:w-[230px] lg:w-[283px]"
-                width={283}
-                height={495}
-              />
-            </div>
+          <section className="text-[#e2e8f0] rounded-xl bg-[#1e293b] px-4 py-5 w-full max-w-[600px] border border-[#334155]">
+      <h4 className="text-[#e2e8f0] my-4 text-xl font-semibold">
+        Example: User Onboarding Flow
+      </h4>
+      <pre className="text-sm border-0 overflow-auto rounded-[8px] p-4 leading-6 bg-[#0f172a]">
+        <code>
+{`// Example Ductape feature sequence
+const onboardingFlow: IFeatureSequence = {
+  tag: 'user_onboarding',
+  events: [
+    {
+      type: FeatureEventTypes.ACTION,
+      event: 'create_user',
+      input: { name: '$Input{name}', email: '$Input{email}' },
+      retries: 1,
+      allow_fail: false,
+    },
+    {
+      type: FeatureEventTypes.ACTION,
+      event: 'assign_default_roles',
+      input: { userId: '$Output{create_user.id}' },
+      retries: 1,
+      allow_fail: false,
+    },
+    {
+      type: FeatureEventTypes.NOTIFICATION,
+      event: 'send_welcome_email',
+      input: { email: '$Input{email}' },
+      retries: 2,
+      allow_fail: true,
+    },
+  ],
+};`}
+        </code>
+      </pre>
+    </section>
 
-            <div className="relative">
-              <div className="absolute top-0 left-0 w-full h-full bg-primary rounded-lg rotate-[-3deg]"></div>
-              <Image
-                src="/images/male.svg"
-                alt="a backview of a man"
-                className="relative rotate-3 w-[150px] sm:w-[180px] md:w-[230px] lg:w-[283px]"
-                width={283}
-                height={495}
-              />
-            </div>
-          </div>
+          
         </div>
       </section>
 
-      <section className="text-center mt-20 md:mt-40  px-4 bg-[#FFFDF9]">
-        <div className="max-w-[90%] md:max-w-[1149px] mx-auto">
-          <div>
-            <p className="text-lg md:text-xl leading-6 md:leading-[30px] font-semibold text-[#5F5F5F] py-2 md:py-3">
-              WHY DUCTAPE?
-            </p>
-            <p className="text-2xl md:text-5xl leading-8 md:leading-[60px] font-bold text-grey">
-              The Ultimate Platform for Building and Integrating Backend
-              Components
-            </p>
-            <div className="flex items-center justify-center py-4">
-              <DownloadButton className="bg-primary text-white fill-white hover:bg-primary hover:text-white hover:shadow-lg px-6 py-3 rounded-full" />
+      <div className="bg-[#fdf3e3] py-16 mt-20">
+      <section className="m-auto px-6 md:px-12 lg:px-16 max-w-[1440px] text-center">
+        <h3 className = "text-[32px] font-bold text-[#0f172a] mb-8">Powerful Features for Modern Development</h3>
+        <div className="grid gap-8 md:gap-12 lg:gap-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+         
+          <div className="bg-white border border-[#e2e8f0] rounded-xl p-8 shadow-sm hover:border-primary hover:shadow-[0_8px_25px_rgba(37,99,235,0.1)] hover:-translate-y-[2px] transition-all duration-200 ease-in-out">
+  <div className="flex items-center gap-4 mb-4">
+    <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-2xl shrink-0 bg-gradient-to-br from-primary to-primary/80">
+      ⚡
+    </div>
+    <h4 className="text-xl font-semibold text-[#0f172a] m-0">Fast Third-Party Integrations</h4>
+  </div>
+  <p className="text-[#64748b] leading-relaxed m-0">
+    Quickly implement third-party API actions and services in your codebase.
+  </p>
+</div>
+
+
+                    <div className="bg-white border border-[#e2e8f0] rounded-xl p-8 shadow-sm hover:border-primary hover:shadow-[0_8px_25px_rgba(37,99,235,0.1)] hover:-translate-y-[2px] transition-all duration-200 ease-in-out">
+
+            <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-2xl shrink-0 bg-gradient-to-br from-primary to-primary/80">
+🔧</div>
+              <h4 className="text-xl font-semibold text-[#0f172a] m-0">Reusable Components</h4>
             </div>
+            <p className="text-[#64748b] leading-relaxed m-0">Standardize your approach to APIs, databases, notifications, and cloud functions.</p>
+          </div>
+
+                    <div className="bg-white border border-[#e2e8f0] rounded-xl p-8 shadow-sm hover:border-primary hover:shadow-[0_8px_25px_rgba(37,99,235,0.1)] hover:-translate-y-[2px] transition-all duration-200 ease-in-out">
+
+            <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-2xl shrink-0 bg-gradient-to-br from-primary to-primary/80">
+🔄</div>
+              <h4 className="text-xl font-semibold text-[#0f172a] m-0">Event-Driven Features</h4>
+            </div>
+            <p className="text-[#64748b] leading-relaxed m-0">Build and monitor robust event workflows with retries and error handling baked in.</p>
+          </div>
+
+                    <div className="bg-white border border-[#e2e8f0] rounded-xl p-8 shadow-sm hover:border-primary hover:shadow-[0_8px_25px_rgba(37,99,235,0.1)] hover:-translate-y-[2px] transition-all duration-200 ease-in-out">
+
+            <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-2xl shrink-0 bg-gradient-to-br from-primary to-primary/80">
+⚙️</div>
+              <h4 className="text-xl font-semibold text-[#0f172a] m-0">Background Jobs & Functions</h4>
+            </div>
+            <p className="text-[#64748b] leading-relaxed m-0">Create scalable, fault-tolerant jobs and serverless functions.</p>
+          </div>
+
+                    <div className="bg-white border border-[#e2e8f0] rounded-xl p-8 shadow-sm hover:border-primary hover:shadow-[0_8px_25px_rgba(37,99,235,0.1)] hover:-translate-y-[2px] transition-all duration-200 ease-in-out">
+
+            <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-2xl shrink-0 bg-gradient-to-br from-primary to-primary/80">
+📧</div>
+              <h4 className="text-xl font-semibold text-[#0f172a] m-0">Unified Communication</h4>
+            </div>
+            <p className="text-[#64748b] leading-relaxed m-0">Manage emails and notifications across services without extra complexity.</p>
+          </div>
+
+                    <div className="bg-white border border-[#e2e8f0] rounded-xl p-8 shadow-sm hover:border-primary hover:shadow-[0_8px_25px_rgba(37,99,235,0.1)] hover:-translate-y-[2px] transition-all duration-200 ease-in-out">
+
+            <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-2xl shrink-0 bg-gradient-to-br from-primary to-primary/80">
+📊</div>
+              <h4 className="text-xl font-semibold text-[#0f172a] m-0">Monitor Everything</h4>
+            </div>
+            <p className="text-[#64748b] leading-relaxed m-0">Keep tabs on all actions, events, and jobs across all environments in real time.</p>
           </div>
         </div>
       </section>
+    </div>
 
-      <section className="px-6 md:px-12 lg:px-16 py-12 bg-[#FFFDF9]">
-        <div className="max-w-[1312px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            <div className="md:col-span-2 lg:col-span-3 bg-[#A3C6FB] p-6 md:p-10 rounded-lg shadow-md text-center md:text-left">
-              <p className="text-2xl md:text-4xl font-bold text-grey">
-                Integrate at Lightning Speed
-              </p>
-              <p className="mt-2 text-grey text-sm md:text-base font-medium">
-                Discover and use third-party apps and services effortlessly.
-                Import API actions and use them in code in hours, not weeks.
-              </p>
-              <Image
-                src="/images/integrationdemo.svg"
-                alt="Integration Image"
-                className="mx-auto mt-4"
-                width={500}
-                height={251}
-              />
-            </div>
-
-            <div className="bg-[#C4B1F9] p-6 md:p-10 text-center rounded-lg shadow-md lg:col-span-2">
-              <Image
-                src="/images/developmentdemo.svg"
-                alt="Development Image"
-                className="mx-auto"
-                width={369}
-                height={214}
-              />
-              <p className="text-2xl md:text-4xl font-bold text-grey mt-4">
-                Simplify Development
-              </p>
-              <p className="mt-2 text-grey text-sm md:text-base font-medium">
-                Define and work with simple components that are automatically
-                reusable and configured for multiple environments and versions.
-              </p>
-            </div>
-
-            <div className="bg-[#FFE27B] p-6 md:p-10 text-center rounded-lg shadow-md lg:col-span-2">
-              <Image
-                src="/images/HitRate.svg"
-                alt="Hit Rate"
-                className="mx-auto"
-                width={369}
-                height={214}
-              />
-              <p className="text-2xl md:text-4xl font-bold text-grey mt-4">
-                Stay Resilient
-              </p>
-              <p className="mt-2 text-grey text-sm md:text-base font-medium">
-                Handle downtime with automatic retries, failovers, and provider
-                switching.
-              </p>
-            </div>
-
-            <div className="md:col-span-2 lg:col-span-3 bg-[#A3C6FB] p-6 md:p-10 rounded-lg shadow-md text-center md:text-left">
-              <p className="text-2xl md:text-4xl font-bold text-grey">
-                Full Visibility Across Environments
-              </p>
-              <p className="mt-2 text-grey text-sm md:text-base font-medium">
-                See what’s happening in your system. From dev to production, and
-                catch issues instantly.
-              </p>
-              <Image
-                src="/images/env.svg"
-                alt="Environment"
-                className="mx-auto mt-4 md:mt-10"
-                width={500}
-                height={251}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 md:px-12 lg:px-16 text-center mt-20 bg-[#1B1B1B] text-white py-16">
-        <div className="max-w-[1440px] mx-auto">
-          <div className="max-w-[833px] mx-auto">
-            <p className="text-lg md:text-xl leading-6 md:leading-7 font-semibold py-3">
-              THE DUCTAPE ADVANTAGE
-            </p>
-            <p className="text-3xl md:text-5xl leading-8 md:leading-[60px] font-bold">
-              Reduce development time and accelerate time-to-market
-            </p>
-            <div className="flex items-center justify-center py-4">
-              <Link
-                href="https://docs.ductape.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="w-full md:w-[211px] h-[56px] rounded-full px-6 py-3 border flex items-center justify-center gap-3 hover:shadow-lg border-primary">
-                  Read Documentation
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          <div className=" max-w-[1506px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-10 px-4 md:px-0">
-            {featuresCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-transparent text-white p-6 rounded-lg shadow-sm text-start"
-              >
-                <Image
-                  src={card.icon}
-                  alt={card.title}
-                  className="w-10 h-10 mb-4"
-                  width={40}
-                  height={40}
-                />
-                <p className="text-xl md:text-2xl font-semibold">
-                  {card.title}
-                </p>
-                <p className="text-base md:text-lg font-medium my-2">
-                  {card.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       <section
         aria-labelledby="testimonials"
-        className="bg-[#FDF3E3] px-6 md:px-12 lg:px-16 py-16"
-      >
-        <div className="max-w-[1440px] mx-auto">
-          <h2
-            id="testimonials"
-            className="text-3xl md:text-5xl leading-[40px] md:leading-[60px] font-bold text-grey w-full md:w-[50%] pr-0 md:pr-2"
-          >
-            Why are developers choosing Ductape?
-          </h2>
-          <p className="text-lg md:text-xl leading-[26px] md:leading-[30px] font-semibold text-grey py-3 w-full md:w-[70%] pr-0 md:pr-2">
-            Here’s what some of them are saying
-          </p>
+        className="bg-[#1e40af] px-6 md:px-12 lg:px-16 py-16"
+      ><div className="max-w-[1440px] mx-auto">
+  <h2
+    id="testimonials"
+    className="text-3xl md:text-[32px] leading-[40px] md:leading-[60px] font-bold text-white w-full md:w-[50%] pr-0 md:pr-2"
+  >
+    Who the product is for?
+  </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-12">
-            <div className="bg-white p-6 md:p-10 rounded-lg shadow-md lg:col-span-2">
-              <p className="text-lg md:text-2xl text-grey font-semibold pb-4">
-                “What used to take weeks to implement now takes hours with
-                Ductape. From third-party APIs to event-driven workflows,
-                everything just works.”
-              </p>
-              <div>
-                <span className="block text-lg md:text-xl leading-[30px] md:leading-[34px] text-grey font-semibold">
-                  Oladayo Olawuni
-                </span>
-                <span className="block text-base text-grey">Ductape</span>
-              </div>
-            </div>
-            <div className="bg-white p-6 md:p-10 rounded-lg shadow-md lg:col-span-2">
-              <p className="text-lg md:text-2xl text-grey font-semibold pb-4">
-                “What used to take weeks to implement now takes hours with
-                Ductape. From third-party APIs to event-driven workflows,
-                everything just works.”
-              </p>
-              <div>
-                <span className="block text-lg md:text-xl leading-[30px] md:leading-[34px] text-grey font-semibold">
-                  Oladayo Olawuni
-                </span>
-                <span className="block text-base text-grey">Ductape</span>
-              </div>
-            </div>
-          </div>
-        </div>
+  {/* <p className="text-lg md:text-xl leading-[26px] md:leading-[30px] font-semibold text-grey py-3 w-full md:w-[70%] pr-0 md:pr-2">
+    Here’s what some of them are saying
+  </p> */}
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-12">
+
+    {/* Card 1 */}
+    <div className="bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.2)] rounded-xl p-8 md:p-10 shadow-[0_2px_6px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all duration-200 ease-in-out hover:border-[rgba(255,255,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,0,0,0.2)] hover:-translate-y-[2px] hover:bg-[rgba(255,255,255,0.15)] lg:col-span-2">
+      <p className="text-lg  text-[#e2e8f0] font-medium text-center">
+        Backend engineers building partner integrations.
+      </p>
+    </div>
+
+    {/* Card 2 */}
+    <div className="bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.2)] rounded-xl p-8 md:p-10 shadow-[0_2px_6px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all duration-200 ease-in-out hover:border-[rgba(255,255,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,0,0,0.2)] hover:-translate-y-[2px] hover:bg-[rgba(255,255,255,0.15)] lg:col-span-2">
+      <p className="text-lg  text-[#e2e8f0] font-medium">
+        Frontend developers trying to call backend APIs directly in their code, without managing complex backend setups.
+      </p>
+    </div>
+
+    <div className="bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.2)] rounded-xl p-8 md:p-10 shadow-[0_2px_6px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all duration-200 ease-in-out hover:border-[rgba(255,255,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,0,0,0.2)] hover:-translate-y-[2px] hover:bg-[rgba(255,255,255,0.15)] lg:col-span-2">
+      <p className="text-lg  text-[#e2e8f0] font-medium text-center">
+        Startups accelerating feature builds without reinventing infrastructure.
+      </p>
+    </div>
+
+    <div className="bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.2)] rounded-xl p-8 md:p-10 shadow-[0_2px_6px_rgba(0,0,0,0.1)] backdrop-blur-md transition-all duration-200 ease-in-out hover:border-[rgba(255,255,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,0,0,0.2)] hover:-translate-y-[2px] hover:bg-[rgba(255,255,255,0.15)] lg:col-span-2">
+      <p className="text-lg  text-[#e2e8f0] font-medium text-center">
+        Team leads wanting visibility into what their backend systems actually do.
+      </p>
+    </div>
+
+  </div>
+</div>
+
       </section>
 
       <footer className="bg-[#1B1B1B] text-white px-6 md:px-12 lg:px-16">
